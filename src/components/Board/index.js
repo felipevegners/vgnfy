@@ -15,7 +15,7 @@ export default function Board() {
   const [lists, setLists] = useState(data)
   const [isMovingCard, setIsMovingCard] = useState(false)
 
-
+// eslint-disable-next-line
   const handleDrop = useCallback(
     (index, item) => {
       if(!isMovingCard){

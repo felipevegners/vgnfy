@@ -21,7 +21,7 @@ export default function Card({ data, index, listIndex }) {
     hover(item, monitor) {
       var date = new Date()
       var now = date.getTime()
-      if(memTime == 0) memTime = now
+      if(memTime === 0) memTime = now
       const draggedListIndex = item.listIndex
       const targetListIndex = listIndex
 
@@ -44,7 +44,7 @@ export default function Card({ data, index, listIndex }) {
       if (draggedIndex > targetIndex && draggedTop > targetCenter) {
         return
       }
-      if((now - memTime) >= 300 || draggedListIndex == targetListIndex){
+      if((now - memTime) >= 300 || draggedListIndex === targetListIndex){
         move(draggedListIndex, targetListIndex, draggedIndex, targetIndex,'card')
         item.index = targetIndex
         item.listIndex = targetListIndex
